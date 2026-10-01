@@ -1,0 +1,241 @@
+/* ============================================================
+   Sugam Jain — Portfolio
+   Palette: Deep Navy / Warm Off-White / Steel Blue accent
+   ============================================================ */
+
+:root {
+  --color-navy: #16324f;
+  --color-offwhite: #f5f7fa;
+  --color-blue: #2e86ab;
+  --color-navy-soft: rgba(22, 50, 79, 0.08);
+  --color-blue-soft: rgba(46, 134, 171, 0.12);
+  --color-text-body: #334455;
+  --color-white: #ffffff;
+  --shadow-card: 0 4px 16px rgba(22, 50, 79, 0.1);
+  --shadow-card-hover: 0 12px 28px rgba(46, 134, 171, 0.22);
+  --radius: 10px;
+  --transition: 0.25s ease;
+}
+
+/* ---------- Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: var(--color-offwhite);
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+/* ---------- Header / Nav ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color-navy);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 1rem;
+}
+
+.nav-link {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--color-blue);
+  border-bottom-color: var(--color-blue);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  letter-spacing: 0.02em;
+}
+
+.hero-subtitle {
+  margin-top: 0.75rem;
+  font-size: 1.2rem;
+  color: #c8d4de;
+}
+
+.hero-cta {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  transition: background-color var(--transition), transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.hero-cta:hover,
+.hero-cta:focus {
+  background-color: #24708f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(46, 134, 171, 0.4);
+}
+
+/* ---------- Sections ---------- */
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: var(--color-navy);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--color-blue);
+  display: inline-block;
+}
+
+.about-text {
+  margin-bottom: 1rem;
+  max-width: 62ch;
+}
+
+/* ---------- Skills ---------- */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+}
+
+.skill-card {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-navy-soft);
+  color: var(--color-navy);
+  border: 1px solid var(--color-navy);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: default;
+  transition: background-color var(--transition), color var(--transition),
+    transform var(--transition), border-color var(--transition);
+}
+
+.skill-card:hover {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-color: var(--color-navy);
+  transform: translateY(-3px);
+}
+
+/* ---------- Projects ---------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-navy-soft);
+  border-top: 4px solid var(--color-blue);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.project-title {
+  color: var(--color-navy);
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background-color: var(--color-navy);
+  color: #c8d4de;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+}
+
+/* ---------- Responsive: ~375px ---------- */
+@media (max-width: 480px) {
+  .nav-list {
+    gap: 1.1rem;
+    padding: 0.9rem 0.5rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    padding: 3.5rem 1.25rem 3rem;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .section {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .skills-list {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .skill-card {
+    text-align: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
